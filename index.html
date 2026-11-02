@@ -1,0 +1,457 @@
+<title>Dr. Brandon Frye</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Dr. Brandon Frye is a Washington, DC educator and school leader working in liberatory mathematics, critical literacy, and instructional leadership.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+
+<style>
+/* Layout: white page throughout; navy type, brass accents, stone used only as a faint band wash. */
+:root {
+  --page:       #FFFFFF;
+  --wash:       #FAF8F5;
+  --ink:        #0E1F33;
+  --graphite:   #4A5568;
+  --brass:      #B07D1F;
+  --brass-deep: #8E6416;
+  --stone:      #EFEAE1;
+  --line:       #E2DCD1;
+  --line-firm:  #CFC6B7;
+
+  --display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --body: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --measure: 65ch;
+  --gut-l: max(20px, env(safe-area-inset-left, 0px));
+  --gut-r: max(20px, env(safe-area-inset-right, 0px));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page:       #0C1724;
+    --wash:       #111F30;
+    --ink:        #F1EFEA;
+    --graphite:   #AEBCCB;
+    --brass:      #D9A647;
+    --brass-deep: #E8BC66;
+    --stone:      #16293C;
+    --line:       #25405A;
+    --line-firm:  #35587A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --page:       #0C1724;
+  --wash:       #111F30;
+  --ink:        #F1EFEA;
+  --graphite:   #AEBCCB;
+  --brass:      #D9A647;
+  --brass-deep: #E8BC66;
+  --stone:      #16293C;
+  --line:       #25405A;
+  --line-firm:  #35587A;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding-left: var(--gut-l);
+  padding-right: var(--gut-r);
+}
+
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.15; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin: 0;
+}
+
+/* ---------- top bar ---------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--page);
+  z-index: 10;
+}
+
+.topbar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 9;
+  background: var(--page);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 22px;
+  padding-block: 14px;
+}
+.brand {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.97rem;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+.topnav { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 0.87rem; }
+.topnav a {
+  color: var(--graphite);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+}
+.topnav a:hover, .topnav a:focus-visible { color: var(--brass-deep); border-bottom-color: var(--brass); }
+
+/* ---------- hero ---------- */
+.hero .wrap { padding-block: clamp(44px, 7vw, 84px); }
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 56px);
+  align-items: center;
+}
+.hero h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); margin-bottom: 16px; }
+.hero .rule { width: 72px; height: 3px; background: var(--brass); margin-bottom: 20px; }
+.hero .role {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--graphite);
+  margin-bottom: 20px;
+}
+.hero .lede {
+  font-size: clamp(1.02rem, 1.7vw, 1.17rem);
+  color: var(--graphite);
+  max-width: 54ch;
+  margin-bottom: 30px;
+}
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+}
+.btn-solid { background: var(--ink); color: var(--page); border-color: var(--ink); }
+.btn-solid:hover, .btn-solid:focus-visible { background: var(--brass-deep); border-color: var(--brass-deep); color: #fff; }
+.btn-ghost { border-color: var(--line-firm); color: var(--ink); }
+.btn-ghost:hover, .btn-ghost:focus-visible { border-color: var(--brass); color: var(--brass-deep); }
+
+/* placeholder frame */
+.ph {
+  border: 1.5px dashed var(--line-firm);
+  background: var(--wash);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--graphite);
+}
+.ph-portrait { aspect-ratio: 4 / 5; max-width: 100%; }
+
+/* ---------- sections ---------- */
+section { scroll-margin-top: 92px; }
+.band-wash { background: var(--wash); border-block: 1px solid var(--line); }
+.band .wrap { padding-block: clamp(44px, 6vw, 76px); }
+
+.sec-head { margin-bottom: 32px; }
+.sec-head h2 { font-size: clamp(1.6rem, 3.3vw, 2.15rem); margin-top: 9px; }
+.sec-head p { color: var(--graphite); max-width: var(--measure); margin-top: 12px; }
+
+/* ---------- featured engagement ---------- */
+.feature {
+  background: var(--page);
+  border: 1px solid var(--line-firm);
+  border-radius: 4px;
+  padding: clamp(22px, 3.4vw, 34px);
+  display: grid;
+  grid-template-columns: minmax(0, 140px) minmax(0, 1fr);
+  gap: clamp(20px, 3.5vw, 36px);
+  align-items: start;
+}
+.datestamp {
+  background: var(--ink);
+  border-radius: 4px;
+  padding: 18px 14px;
+  text-align: center;
+}
+.datestamp .mo {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+.datestamp .dy {
+  font-family: var(--display);
+  font-size: 2.9rem;
+  font-weight: 700;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+  color: var(--page);
+}
+.datestamp .yr { font-size: 0.83rem; color: #9FB1C4; }
+.feature h3 { font-size: clamp(1.14rem, 2.2vw, 1.42rem); margin-bottom: 13px; }
+.feature .meta { font-size: 0.9rem; color: var(--graphite); }
+.feature .host { font-weight: 600; color: var(--ink); margin-bottom: 3px; }
+
+/* ---------- pillars ---------- */
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 22px; }
+.pillar { border-top: 3px solid var(--brass); padding-top: 20px; min-width: 0; }
+.pillar h3 { font-size: 1.18rem; margin: 12px 0 11px; }
+.pillar p { color: var(--graphite); font-size: 0.95rem; }
+.numeral {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid var(--brass);
+  color: var(--brass-deep);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ---------- about ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 250px) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+.about-body p + p { margin-top: 16px; }
+.about-body p { color: var(--graphite); max-width: var(--measure); }
+
+.creds { display: grid; grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)); gap: 18px; margin-top: 36px; }
+.cred { border-top: 2px solid var(--line-firm); padding-top: 13px; min-width: 0; }
+.cred .deg { font-family: var(--display); font-weight: 700; font-size: 1.03rem; color: var(--brass-deep); margin-bottom: 3px; }
+.cred .det { font-size: 0.86rem; color: var(--graphite); line-height: 1.45; }
+
+/* ---------- contact ---------- */
+.contact .wrap { padding-block: clamp(46px, 6vw, 78px); }
+.contact h2 { font-size: clamp(1.6rem, 3.3vw, 2.15rem); margin-bottom: 14px; }
+.contact > .wrap > p { color: var(--graphite); max-width: 58ch; }
+.contact-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 22px; margin-top: 32px; align-items: start; }
+
+footer { border-top: 1px solid var(--line); color: var(--graphite); font-size: 0.83rem; }
+footer .wrap { padding-block: 24px; display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; }
+
+@media (max-width: 760px) {
+  .hero-grid, .feature, .about-grid { grid-template-columns: minmax(0, 1fr); }
+  .datestamp { max-width: 140px; }
+  .ph-portrait { max-width: 290px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+</style>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">Dr. Brandon Frye</a>
+    <nav class="topnav">
+      <a href="#work">Work</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <h1>Rigor is a form of respect.</h1>
+          <div class="rule"></div>
+          <p class="role">Educator &middot; School Leader &middot; Instructional Designer</p>
+          <p class="lede">
+            Dr. Brandon Frye is a Washington, DC educator and school leader. He helps schools raise
+            what students are asked to do, design instruction that reflects the young people in front
+            of it, and build the educators who carry that work.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="#contact">Work with Dr. Frye</a>
+            <a class="btn btn-ghost" href="#speaking">Speaking &amp; panels</a>
+          </div>
+        </div>
+        <div class="ph ph-portrait">
+          PLACEHOLDER<br>Professional headshot<br>(vertical, high resolution)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-wash" id="speaking">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Conferences, Panels, Papers</p>
+        <h2>Next engagement</h2>
+      </div>
+      <div class="feature">
+        <div class="datestamp">
+          <div class="mo">Nov</div>
+          <div class="dy">7</div>
+          <div class="yr">2026</div>
+        </div>
+        <div>
+          <h3>Imagining Otherwise: Using Afrofuturist Young Adult Literature to Cultivate Critical Literacy and Future-Oriented Thinking</h3>
+          <p class="meta host">Conference for Young Adult Literature Louisiana (CYALL 2026)</p>
+          <p class="meta">LSUS Noel Memorial Library &middot; Shreveport, Louisiana</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What a school hires him to do</p>
+        <h2>Three areas of practice</h2>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="numeral">1</span>
+          <h3>Transforming Instruction</h3>
+          <p>
+            Liberatory mathematics, critical literacy, and culturally responsive learning. Task design,
+            cognitive demand, and instruction that treats students' communities as context rather than
+            decoration.
+          </p>
+        </div>
+        <div class="pillar">
+          <span class="numeral">2</span>
+          <h3>Instructional Design Coaching</h3>
+          <p>
+            Developing educators and leaders. Coaching cycles, PLC facilitation around rigor and
+            alignment, and preparing teacher-leaders for the step into administration.
+          </p>
+        </div>
+        <div class="pillar">
+          <span class="numeral">3</span>
+          <h3>Conferences, Panels, Papers</h3>
+          <p>
+            Keynotes, panels, and workshops on what we ask of Black students, designing for cognitive
+            demand, and academic recovery that is not remediation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-wash" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">About</p>
+        <h2>Nine years in DC classrooms and school leadership</h2>
+      </div>
+      <div class="about-grid">
+        <div class="ph ph-portrait">
+          PLACEHOLDER<br>Secondary photo<br>teaching, coaching, or presenting
+        </div>
+        <div class="about-body">
+          <p>
+            Dr. Frye began as a middle school mathematics teacher at Friendship Public Charter Schools.
+            He moved to Paul Laurence Dunbar High School, where he has served as Math Department Chair
+            and honors Algebra 1 and Geometry teacher, Interim 11th Grade Assistant Principal, and
+            School Redesign Instructional Coach. He now directs the school's Saturday School program,
+            which he designed and built from the ground up.
+          </p>
+          <p>
+            His coaching work centers on task design and cognitive demand, and he facilitates
+            professional learning communities focused on rigor, critical literacy, and student-centered
+            pedagogy.
+          </p>
+          <p>
+            He is a New Leaders Principal Fellow and a DCPS Aspiring Assistant Principal Fellow, and
+            served as Assistant Principal for Washington DC's Summer Learning Academy.
+          </p>
+          <div class="creds">
+            <div class="cred">
+              <div class="deg">Ed.D.</div>
+              <div class="det">Educational Leadership<br>Liberty University</div>
+            </div>
+            <div class="cred">
+              <div class="deg">M.A.</div>
+              <div class="det">Secondary Mathematics<br>University of the District of Columbia</div>
+            </div>
+            <div class="cred">
+              <div class="deg">M.S.</div>
+              <div class="det">Education Policy &amp; Leadership<br>American University</div>
+            </div>
+            <div class="cred">
+              <div class="deg">B.S.</div>
+              <div class="det">Biomechanics<br>Old Dominion University</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact band" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Start a conversation</h2>
+      <p>
+        Tell him the school, the challenge, and the timeline. Every engagement starts with a
+        conversation, not a price list.
+      </p>
+      <div class="contact-row">
+        <div class="ph" style="padding:24px">
+          PLACEHOLDER<br>Professional email address<br>on this domain
+        </div>
+        <div class="ph" style="padding:24px">
+          PLACEHOLDER<br>LinkedIn and any other<br>profiles to link
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Dr. Brandon Frye &middot; Washington, DC</span>
+    <span>Draft site &middot; content pending review</span>
+  </div>
+</footer>
